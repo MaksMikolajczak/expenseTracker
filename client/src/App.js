@@ -1,9 +1,22 @@
 import React from 'react'
+import { Grid } from '@material-ui/core';
+
+import Details from './components/Details';
 
 const App = () => {
     return (
         <div>
-            app
+            <Grid container spacing={0} alignItems={center} justify={center} stlyle={{ height: '100vh'}}>
+                <Grid Item xs={12} sm={4}>
+                    <Details />
+                </Grid>
+                <Grid Item xs={12} sm={4}>
+                    Main
+                </Grid>
+                <Grid Item xs={12} sm={4}>
+                    <Details />
+                </Grid>
+            </Grid>
         </div>
     )
 }
