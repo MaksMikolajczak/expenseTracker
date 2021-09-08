@@ -1,20 +1,23 @@
 import React from 'react'
 import { Grid } from '@material-ui/core';
 
-import Details from './components/Details';
+import Side from './components/side';
+
+// import useStyles from './css'
 
 const App = () => {
+    // const classes = useStyles();
     return (
         <div>
-            <Grid container spacing={0} alignItems={center} justify={center} stlyle={{ height: '100vh'}}>
+            <Grid container spacing={0} stlyle={{ height: '100vh'}}>
                 <Grid Item xs={12} sm={4}>
-                    <Details />
+                    <Side title="Income"/>
                 </Grid>
                 <Grid Item xs={12} sm={4}>
                     Main
                 </Grid>
                 <Grid Item xs={12} sm={4}>
-                    <Details />
+                    <Side title="Expenses"/>
                 </Grid>
             </Grid>
         </div>
