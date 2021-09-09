@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid } from '@material-ui/core';
 
 import Side from './components/side';
+import Main from './components/main';
 
 // import useStyles from './css'
 
@@ -13,8 +14,8 @@ const App = () => {
                 <Grid Item xs={12} sm={4}>
                     <Side title="Income"/>
                 </Grid>
-                <Grid Item xs={12} sm={4}>
-                    Main
+                <Grid Item xs={12} sm={3}>
+                    < Main />
                 </Grid>
                 <Grid Item xs={12} sm={4}>
                     <Side title="Expenses"/>
