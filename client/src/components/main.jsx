@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card, CardHeader, CardContent, Typography, Grid } from '@material-ui/core';
 import {Doughnut} from 'react-chartjs-2';
+import Form from './form';
 
 import useStyles from './css';
 
@@ -13,7 +14,7 @@ const Main = ({title}) => {
             <Typography variant="h5">Total Balance</Typography>
             <Typography variant="subtitle1" >Total Balance</Typography>
             {/* <Doughnut data="DATA" /> */}
-            {/* Form */}
+            <Form/>
         </CardContent>
         <CardContent className={classes.Main2} >
             <Grid container spacing={2} >

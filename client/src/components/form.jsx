@@ -3,7 +3,7 @@ import { TextField, Typography, Grid, Button, FormControl, InputLabel, Select, M
 
 import useStyles from './css'
 
-const form = () => {
+const Form = () => {
     const classes = useStyles();
 
     return (
@@ -27,8 +27,15 @@ const form = () => {
                     </Select>
                 </FormControl>
             </Grid>
+            <Grid item xs={6} >
+                <TextField type="number" laber="Amount" fullWidth />
+            </Grid>
+            <Grid item xs={6} >
+                <TextField type="date" laber="Date" fullWidth />
+            </Grid>
+            <Button className={classes.Button} variant="outlined" color="primary">Create</Button>
         </Grid>
     )
 }
 
-export default form
+export default Form
