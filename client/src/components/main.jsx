@@ -1,7 +1,8 @@
 import React from 'react';
-import {Card, CardHeader, CardContent, Typography, Grid } from '@material-ui/core';
+import {Card, CardHeader, CardContent, Typography, Grid} from '@material-ui/core';
 import {Doughnut} from 'react-chartjs-2';
 import Form from './form';
+import List from './list';
 
 import useStyles from './css';
 
@@ -19,7 +20,7 @@ const Main = ({title}) => {
         <CardContent className={classes.Main2} >
             <Grid container spacing={2} >
                 <Grid item xs={12}>
-                    {/* List */}
+                    <List/>
                 </Grid>
             </Grid>
         </CardContent>

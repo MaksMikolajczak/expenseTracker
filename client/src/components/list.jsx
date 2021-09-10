@@ -8,18 +8,25 @@ import useStyles from './css';
 const List = () => {
     const classes = useStyles();
 
-    const transaction = [];
+    const contract = [
+        {id: 1, type:'Income', category: 'salary', amount: 50, date: "last friday"}
+    ];
 
     return (
         <MULIist dense={false} className={classes.List} >
-            <Slide direction="down" in mountOnEnter unmountOnExit key={transaction.id} >
+            <Slide direction="down" in mountOnEnter unmountOnExit key={contract.id} >
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar className={type === 'Income' ? classes.income: classes.expense} >
+                        <Avatar className={contract.type === 'Income' ? classes.income: classes.expense} >
                             <MoneyOff />
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary={transaction.category}/>
+                    <ListItemText primary={contract.category} sercondary={`£${contract.amount} - ${contract.date}`} />
+                    <ListItemSecondaryAction >
+                        <IconButton edge="end" aria-label="delete" onClick="" >
+                            <Delete />
+                        </IconButton>
+                    </ListItemSecondaryAction>
                 </ListItem>
             </Slide>
         </MULIist>
