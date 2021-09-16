@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { List as MULIist, ListItem, ListItemAvatar, ListItemText, Avatar, ListItemSecondaryAction, IconButton, Slide } from '@material-ui/core';
 import  { Delete, MoneyOff } from '@material-ui/icons';
-
+import { ExpenseTrackerContext } from '../context/context';
 import useStyles from './css';
 
 
 const List = () => {
     const classes = useStyles();
+    const { contracts, deleteContract } = useContext(ExpenseTrackerContext);
 
     const contract = [
         {id: 1, type:'Income', category: 'salary', amount: 50, date: "last friday"}
@@ -23,7 +24,7 @@ const List = () => {
                     </ListItemAvatar>
                     <ListItemText primary={contract.category} sercondary={`£${contract.amount} - ${contract.date}`} />
                     <ListItemSecondaryAction >
-                        <IconButton edge="end" aria-label="delete" onClick="" >
+                        <IconButton edge="end" aria-label="delete" onClick={() => deleteContract(contract.id)} >
                             <Delete />
                         </IconButton>
                     </ListItemSecondaryAction>

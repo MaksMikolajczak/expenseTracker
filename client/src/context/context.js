@@ -11,8 +11,10 @@ export const Provider = ({ children }) => {
 
   const deleteContract = (id) => dispatch({type: 'DELETE_CONTRACT', payload: id})
   const addContract = (contract) => dispatch({type: 'ADD_CONTRACT', payload: contract})
+
+  
   return (
-    <ExpenseTrackerContext.Provider value={{deleteContract, addContract}}>
+    <ExpenseTrackerContext.Provider value={{deleteContract, addContract, contracts}}>
       {children}
     </ExpenseTrackerContext.Provider>
   );

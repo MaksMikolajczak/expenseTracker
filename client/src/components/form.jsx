@@ -3,6 +3,7 @@ import { TextField, Typography, Grid, Button, FormControl, InputLabel, Select, M
 import { ExpenseTrackerContext } from '../context/context';
 import { v4 as uuidv4 } from 'uuid';
 import useStyles from './css'
+import { incomeCategories, expenseCategories } from '../categories/categories';
 
 const initialState = { amount: '', category: '', type: 'Income', date: new Date() }
 const Form = () => {
@@ -12,7 +13,8 @@ const Form = () => {
 
     const createContract = () => {
         const contract = {...formData, id: uuidv4() }
-        addContract();
+        addContract(contract);
+        setFormData(initialState);
     }
     return (
         <Grid container spacing={2} >
