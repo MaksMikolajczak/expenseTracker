@@ -10,7 +10,7 @@ const Form = () => {
     const classes = useStyles();
     const [formData, setFormData] = useState(initialState);
     const { addContract } = useContext(ExpenseTrackerContext);
-
+    const currentCategories = formData.type === 'Income' ? incomeCategories : expenseCategories; 
     const createContract = () => {
         const contract = {...formData, id: uuidv4() }
         addContract(contract);
@@ -32,8 +32,7 @@ const Form = () => {
                     </Select>
                     <InputLabel>Category</InputLabel>
                     <Select value={formData.category} onChange={(e) => setFormData({...formData, category: e.target.value})} >
-                        <MenuItem value="Business">Business</MenuItem>
-                        <MenuItem value="Salary">Salary</MenuItem>
+                        {currentCategories.map((c) => <MenuItem key={c.type} value={c.type}>{c.type}</MenuItem>)}
                     </Select>
                 </FormControl>
             </Grid>
