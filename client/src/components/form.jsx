@@ -13,10 +13,11 @@ const Form = () => {
     const { addContract } = useContext(ExpenseTrackerContext);
     const currentCategories = formData.type === 'Income' ? incomeCategories : expenseCategories; 
     const createContract = () => {
-        const contract = {...formData, id: uuidv4() }
+        const contract = {...formData, amount: Number(formData.amount), id: uuidv4() }
         addContract(contract);
         setFormData(initialState);
     }
+
     return (
         <Grid container spacing={2} >
             <Grid item xs ={12} >
