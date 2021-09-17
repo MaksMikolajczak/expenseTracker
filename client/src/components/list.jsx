@@ -10,11 +10,12 @@ const List = () => {
     const { contracts, deleteContract } = useContext(ExpenseTrackerContext);
 
     const contract = [
-        {id: 1, type:'Income', category: 'salary', amount: 50, date: "last friday"}
+        {id: 1, type:'Income', category: 'salary', amount: 50, date: new Date() }
     ];
 
     return (
         <MULIist dense={false} className={classes.List} >
+            {contracts.map((contract) =>  
             <Slide direction="down" in mountOnEnter unmountOnExit key={contract.id} >
                 <ListItem>
                     <ListItemAvatar>
@@ -22,14 +23,14 @@ const List = () => {
                             <MoneyOff />
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary={contract.category} sercondary={`£${contract.amount} - ${contract.date}`} />
+                    <ListItemText primary={contract.category} secondary={`$${contract.amount} - ${contract.date}`} />
                     <ListItemSecondaryAction >
                         <IconButton edge="end" aria-label="delete" onClick={() => deleteContract(contract.id)} >
                             <Delete />
                         </IconButton>
                     </ListItemSecondaryAction>
                 </ListItem>
-            </Slide>
+            </Slide> )}
         </MULIist>
     )
 }
