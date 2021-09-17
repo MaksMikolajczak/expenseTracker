@@ -6,7 +6,7 @@ import List from './list';
 
 import useStyles from './css';
 
-const Main = ({title}) => {
+const Main = () => {
     const classes = useStyles();
     return (
     <Card className={classes.Main}>

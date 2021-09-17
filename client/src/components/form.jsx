@@ -15,6 +15,7 @@ const Form = () => {
     const createContract = () => {
         const contract = {...formData, amount: Number(formData.amount), id: uuidv4() }
         addContract(contract);
+        console.log(contract);
         setFormData(initialState);
     }
 
