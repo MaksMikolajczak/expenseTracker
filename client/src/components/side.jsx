@@ -7,7 +7,7 @@ import useStyles from './css';
 const Side = ({title}) => {
     const { total, chartData } = useContracts(title);
     const classes = useStyles();
-    console.log(chartData)
+
     return (
     <Card className={title === 'Income' ? classes.income: classes.expense}>
         <CardHeader title={title} />

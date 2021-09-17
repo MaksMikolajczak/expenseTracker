@@ -10,12 +10,10 @@ const useContracts = (title) => {
   const total = typeContracts.reduce((acc, currVal) => acc += currVal.amount, 0);
   const categories = title === 'Income' ? incomeCategories : expenseCategories;
 
-    console.log(typeContracts, total, categories)
+  typeContracts.forEach((con) => {
+    const category = categories.find((c) => c.type === con.category);
 
-  typeContracts.forEach((c) => {
-    const category = categories.find((c) => c.type === c.category);
-
-    if (category) category.amount += c.amount;
+    if (category) category.amount += con.amount;
   });
 
   const currentCategories = categories.filter((c) => c.amount > 0);
