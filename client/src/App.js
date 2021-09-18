@@ -1,13 +1,13 @@
 import React from 'react'
 import { Grid } from '@material-ui/core';
-import { PushToTalkButton, PushToTalkButtonContainer } from '@speechly/react-ui';
+import { PushToTalkButton, PushToTalkButtonContainer, ErrorPanel } from '@speechly/react-ui';
 import Side from './components/side';
 import Main from './components/main';
 
-// import useStyles from './css'
+import useStyles from './css'
 
 const App = () => {
-    // const classes = useStyles();
+    const classes = useStyles();
     return (
         <div>
             <Grid container spacing={0} stlyle={{ height: '100vh'}}>
@@ -23,6 +23,7 @@ const App = () => {
             </Grid>
             <PushToTalkButtonContainer>
                 <PushToTalkButton/>
+                <ErrorPanel/>
             </PushToTalkButtonContainer>
         </div>
     )
