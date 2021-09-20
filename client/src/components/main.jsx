@@ -11,7 +11,7 @@ const Main = () => {
     const { balance } =useContext(ExpenseTrackerContext);
     const classes = useStyles();
     return (
-    <Card className={classes.Main}>
+    <Card className={classes.main}>
         <CardHeader title="Expense Tracker"  subheader="Powered by Speechly" action={
             <IconButton>
                 <Modal/>
@@ -20,11 +20,10 @@ const Main = () => {
         <CardContent>
             <Typography variant="h5">Total Balance</Typography>
             <Typography variant="subtitle1" >£{balance}</Typography>
-            {/* <Doughnut data="DATA" /> */}
             <Form/>
         </CardContent>
-        <CardContent className={classes.Main2} >
-            <Grid container spacing={2} >
+        <CardContent className={classes.main2} >
+            <Grid container spacing={3} >
                 <Grid item xs={12}>
                     <List/>
                 </Grid>

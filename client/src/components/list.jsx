@@ -14,12 +14,12 @@ const List = () => {
     ];
 
     return (
-        <MULIist dense={false} className={classes.List} >
+        <MULIist dense={false} className={classes.list} >
             {contracts.map((contract) =>  
             <Slide direction="down" in mountOnEnter unmountOnExit key={contract.id} >
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar className={contract.type === 'Income' ? classes.income: classes.expense} >
+                        <Avatar className={contract.type === 'Income' ? classes.iconIncome: classes.iconExpense} >
                             <MoneyOff />
                         </Avatar>
                     </ListItemAvatar>
