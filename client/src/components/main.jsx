@@ -1,17 +1,22 @@
 import React, { useContext } from 'react';
-import {Card, CardHeader, CardContent, Typography, Grid} from '@material-ui/core';
+import {Card, CardHeader, CardContent, Typography, Grid, Icon, IconButton} from '@material-ui/core';
 import {Doughnut} from 'react-chartjs-2';
 import Form from './form';
 import List from './list';
 import { ExpenseTrackerContext } from '../context/context';
 import useStyles from './css';
+import Modal from './modal';
 
 const Main = () => {
     const { balance } =useContext(ExpenseTrackerContext);
     const classes = useStyles();
     return (
     <Card className={classes.Main}>
-        <CardHeader title="Expense Tracker"  subheader="Powered by Speechly" />
+        <CardHeader title="Expense Tracker"  subheader="Powered by Speechly" action={
+            <IconButton>
+                <Modal/>
+            </IconButton>
+        } />
         <CardContent>
             <Typography variant="h5">Total Balance</Typography>
             <Typography variant="subtitle1" >£{balance}</Typography>
