@@ -1,36 +1,47 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(() => ({
+  // main css
   main: {
 
   },
+  // main
   main2: {
 
   },
+  // list css
   income: {
     borderBottom: '10px solid rgba(0, 255, 0, 0.5)',
   },
+  // list css
   expense: {
     borderBottom: '10px solid rgba(255, 0, 0, 0.5)',
   },
+  // form css
   button: {
 
   },
+  // list css
   list: {
 
   },
+  // list css
   iconIncome: {
 
   },
+  // list css
   iconExpense: {
 
   },
+  // main css
   help: {
 
   },
+  // modal css
   modalHeader: {
 
   },
+  // modal cc
   modalContent: {
     position: 'absolute',
     top: '30%',
