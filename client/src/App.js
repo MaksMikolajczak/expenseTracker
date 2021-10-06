@@ -10,7 +10,7 @@ const App = () => {
     const classes = useStyles();
     return (
         <div>
-            <Grid container spacing={0} stlyle={{ height: '100vh'}}>
+            <Grid container justify="center">
                 <Grid Item xs={12} sm={4}>
                     <Side title="Income"/>
                 </Grid>

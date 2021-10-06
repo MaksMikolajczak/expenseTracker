@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles(() => ({
   // main css
   main: {
-
+    height: '100%',
   },
   // main
   main2: {
@@ -19,7 +19,7 @@ export default makeStyles(() => ({
   },
   // form css
   button: {
-
+    marginTop: '20px',
   },
   // list css
   list: {
